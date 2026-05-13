@@ -368,6 +368,79 @@
       padding: 22px;
     }
 
+    .coverage-wrap {
+      margin-top: 18px;
+      padding: 22px;
+    }
+
+    .coverage-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 14px;
+    }
+
+    .coverage-card {
+      padding: 18px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(15, 118, 110, 0.1);
+      box-shadow: 0 10px 24px rgba(31, 41, 51, 0.04);
+    }
+
+    .coverage-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: baseline;
+      margin-bottom: 12px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .coverage-name {
+      font-weight: 800;
+    }
+
+    .coverage-pill {
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+    }
+
+    .coverage-pill.good {
+      background: rgba(15, 118, 110, 0.12);
+      color: var(--accent);
+    }
+
+    .coverage-pill.warn {
+      background: rgba(180, 83, 9, 0.12);
+      color: var(--accent-2);
+    }
+
+    .coverage-lines {
+      display: grid;
+      gap: 8px;
+    }
+
+    .coverage-line {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: baseline;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .coverage-line strong {
+      color: var(--ink);
+      text-align: right;
+      white-space: nowrap;
+      font-variant-numeric: tabular-nums;
+    }
+
     .monthly-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
@@ -955,6 +1028,16 @@
       <div class="timeline-grid" id="timeline-grid"></div>
     </section>
 
+    <section class="card coverage-wrap">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title">Relacion deuda vs cobro</h2>
+          <p class="section-copy">Comparacion entre el cierre de deuda neta estimada del equipo 998679/7 y lo que realmente cobraste neto en ese mes. Aca se ve rapido si cobraste el 20%, el 35% o mas de la deuda vigente.</p>
+        </div>
+      </div>
+      <div class="coverage-grid" id="coverage-grid"></div>
+    </section>
+
     <section class="card monthly-wrap">
       <div class="section-head">
         <div>
@@ -1031,6 +1114,7 @@
       deductions: document.getElementById("deductions"),
       monthlyGrid: document.getElementById("monthly-grid"),
       timelineGrid: document.getElementById("timeline-grid"),
+      coverageGrid: document.getElementById("coverage-grid"),
       detailBody: document.getElementById("detail-body"),
     };
 
@@ -1134,6 +1218,43 @@
       });
     }
 
+    function groupCoverage(months, debtMonths, debtNetRatio) {
+      const map = new Map();
+      months.forEach((month) => {
+        map.set(month.month, {
+          month: month.month,
+          label: month.label,
+          cobradoNeto: month.neto,
+          deudaBruta: 0,
+          deudaNetaEstimada: 0,
+          cobertura: 0,
+          multiple: 0,
+          closeDate: null,
+        });
+      });
+      debtMonths.forEach((month) => {
+        const current = map.get(month.month) || {
+          month: month.month,
+          label: month.label,
+          cobradoNeto: 0,
+          deudaBruta: 0,
+          deudaNetaEstimada: 0,
+          cobertura: 0,
+          multiple: 0,
+          closeDate: null,
+        };
+        current.deudaBruta = month.close?.gastos || 0;
+        current.deudaNetaEstimada = current.deudaBruta * debtNetRatio;
+        current.closeDate = month.close?.displayDate || null;
+        map.set(month.month, current);
+      });
+      return [...map.values()].sort((a, b) => a.month.localeCompare(b.month)).map((item) => {
+        const cobertura = item.deudaNetaEstimada ? item.cobradoNeto / item.deudaNetaEstimada : 0;
+        const multiple = item.cobradoNeto ? item.deudaNetaEstimada / item.cobradoNeto : 0;
+        return { ...item, cobertura, multiple };
+      });
+    }
+
     function buildFilters() {
       const options = [{ key: "all", label: "Todo" }].concat(years.map((year) => ({ key: year, label: year })));
       els.filters.innerHTML = options.map((opt) => `
@@ -1162,6 +1283,7 @@
       const average = rows.length ? totalNeto / rows.length : 0;
       const ratio = totalBruto ? (totalNeto / totalBruto) * 100 : 0;
       const debtNetRatio = totalBruto ? totalNeto / totalBruto : 0;
+      const coverageMonths = groupCoverage(months, debtMonths, debtNetRatio);
 
       els.toolbarNote.textContent = selectedYear === "all"
         ? "Vista consolidada de 2025 completo y 2026 hasta mayo."
@@ -1286,6 +1408,27 @@
           `;
         }).join("")
         : '<div class="empty">No hay transferencias mensuales para este filtro.</div>';
+
+      els.coverageGrid.innerHTML = coverageMonths.length
+        ? coverageMonths.map((month) => {
+          const pct = month.cobertura * 100;
+          const pillClass = pct >= 40 ? "good" : "warn";
+          return `
+            <article class="coverage-card">
+              <div class="coverage-head">
+                <div class="coverage-name">${month.label}</div>
+                <div class="coverage-pill ${pillClass}">${pct.toFixed(1).replace(".", ",")}% cubierto</div>
+              </div>
+              <div class="coverage-lines">
+                <div class="coverage-line"><span>Deuda neta estimada</span><strong>${fmtMoney(month.deudaNetaEstimada)}</strong></div>
+                <div class="coverage-line"><span>Cobrado neto mes</span><strong>${fmtMoney(month.cobradoNeto)}</strong></div>
+                <div class="coverage-line"><span>Deuda / cobro</span><strong>${month.cobradoNeto ? `${month.multiple.toFixed(2).replace(".", ",")}x` : "-"}</strong></div>
+                <div class="coverage-line"><span>Corte usado</span><strong>${month.closeDate || "-"}</strong></div>
+              </div>
+            </article>
+          `;
+        }).join("")
+        : '<div class="empty">No hay relacion deuda vs cobro para este filtro.</div>';
 
       els.detailBody.innerHTML = rows.slice().sort((a, b) => b.date.localeCompare(a.date)).map((row) => {
         const descuentos = (row.remesasMutuales || 0) - (row.transferenciaCBU || 0);
