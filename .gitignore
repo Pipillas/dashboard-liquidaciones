@@ -1,0 +1,6 @@
+browser_tmp/
+*.jpeg
+*.jpg
+*.png
+Thumbs.db
+Desktop.ini
