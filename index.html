@@ -1004,6 +1004,12 @@
       `).join("");
     }
 
+    function monthLabel(date) {
+      const [y, m] = date.split("-");
+      const names = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+      return `${names[Number(m) - 1]} ${y}`;
+    }
+
     function groupDebtRowsByMonth(rows) {
       const map = new Map();
       rows.forEach((row) => {
