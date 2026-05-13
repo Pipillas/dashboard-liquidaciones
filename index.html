@@ -491,6 +491,142 @@
       padding: 22px;
     }
 
+    .debt-wrap {
+      margin-top: 18px;
+      padding: 22px;
+    }
+
+    .debt-grid {
+      display: grid;
+      grid-template-columns: 340px minmax(0, 1fr);
+      gap: 18px;
+      align-items: start;
+    }
+
+    .debt-panel {
+      padding: 20px;
+      border-radius: 22px;
+      background: linear-gradient(160deg, rgba(180, 83, 9, 0.12), rgba(15, 118, 110, 0.08));
+      border: 1px solid rgba(180, 83, 9, 0.12);
+    }
+
+    .debt-kicker {
+      color: var(--accent-2);
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 800;
+    }
+
+    .debt-matricula {
+      margin-top: 8px;
+      font-size: 1.55rem;
+      font-weight: 800;
+      line-height: 1.1;
+    }
+
+    .debt-amount {
+      margin-top: 14px;
+      font-size: clamp(1.8rem, 3vw, 2.7rem);
+      font-weight: 800;
+      line-height: 1.02;
+      color: var(--ink);
+      overflow-wrap: anywhere;
+    }
+
+    .debt-meta {
+      margin-top: 16px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .debt-meta-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .debt-meta-row strong {
+      color: var(--ink);
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+
+    .debt-months {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 14px;
+    }
+
+    .debt-month-card {
+      padding: 18px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(15, 118, 110, 0.1);
+      min-width: 0;
+    }
+
+    .debt-month-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: baseline;
+      margin-bottom: 12px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .debt-month-name {
+      font-weight: 800;
+    }
+
+    .debt-month-close {
+      color: var(--accent);
+      font-weight: 800;
+      font-size: 0.9rem;
+      text-align: right;
+      white-space: nowrap;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .debt-date-list {
+      display: grid;
+      gap: 8px;
+    }
+
+    .debt-date-item {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: baseline;
+      padding: 9px 10px;
+      border-radius: 12px;
+      background: rgba(15, 118, 110, 0.05);
+    }
+
+    .debt-date-item.is-close {
+      background: rgba(180, 83, 9, 0.12);
+    }
+
+    .debt-date {
+      color: var(--muted);
+      font-size: 0.89rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .debt-date-value {
+      color: var(--ink);
+      font-size: 0.9rem;
+      font-weight: 800;
+      white-space: nowrap;
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+    }
+
     .table-wrap {
       overflow: auto;
       border-radius: 18px;
@@ -583,6 +719,10 @@
         grid-column: span 12;
       }
 
+      .debt-grid {
+        grid-template-columns: 1fr;
+      }
+
       .bar-item {
         grid-template-columns: 1fr;
       }
@@ -657,6 +797,29 @@
     <section class="toolbar">
       <div class="pill-row" id="year-filters"></div>
       <div class="toolbar-note" id="toolbar-note"></div>
+    </section>
+
+    <section class="card debt-wrap">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title">Deuda por equipo 998679/7</h2>
+          <p class="section-copy">Aca no se suman semanas. Cada fecha es una foto del saldo de <strong>Gastos</strong> en esa liquidacion, y el cierre mensual toma el ultimo corte del mes.</p>
+        </div>
+      </div>
+      <div class="debt-grid">
+        <aside class="debt-panel">
+          <div class="debt-kicker">Saldo actual</div>
+          <div class="debt-matricula">Matricula 998679/7</div>
+          <div class="debt-amount" id="debt-current"></div>
+          <div class="debt-meta">
+            <div class="debt-meta-row"><span>Ultimo corte</span><strong id="debt-current-date"></strong></div>
+            <div class="debt-meta-row"><span>Prestaciones</span><strong id="debt-current-count"></strong></div>
+            <div class="debt-meta-row"><span>Honorarios</span><strong id="debt-current-honorarios"></strong></div>
+            <div class="debt-meta-row"><span>Total liquidado</span><strong id="debt-current-total"></strong></div>
+          </div>
+        </aside>
+        <div class="debt-months" id="debt-months"></div>
+      </div>
     </section>
 
     <section class="grid top">
@@ -757,8 +920,10 @@
   </main>
 
   <script src="./liquidaciones_2025_2026.js"></script>
+  <script src="./equipo_998679_7_2025_2026.js"></script>
   <script>
     const allRows = Array.isArray(window.LIQUIDACIONES_2025_2026) ? window.LIQUIDACIONES_2025_2026 : [];
+    const debtData = window.EQUIPO_998679_7 || { rows: [], monthly: [] };
     const years = [...new Set(allRows.map((row) => row.date.slice(0, 4)))].sort();
     let selectedYear = "all";
 
@@ -774,6 +939,12 @@
       descuentosSub: document.getElementById("kpi-descuentos-sub"),
       cantidad: document.getElementById("kpi-cantidad"),
       cantidadSub: document.getElementById("kpi-cantidad-sub"),
+      debtCurrent: document.getElementById("debt-current"),
+      debtCurrentDate: document.getElementById("debt-current-date"),
+      debtCurrentCount: document.getElementById("debt-current-count"),
+      debtCurrentHonorarios: document.getElementById("debt-current-honorarios"),
+      debtCurrentTotal: document.getElementById("debt-current-total"),
+      debtMonths: document.getElementById("debt-months"),
       monthlyBars: document.getElementById("monthly-bars"),
       deductions: document.getElementById("deductions"),
       monthlyGrid: document.getElementById("monthly-grid"),
@@ -833,6 +1004,22 @@
       `).join("");
     }
 
+    function groupDebtRowsByMonth(rows) {
+      const map = new Map();
+      rows.forEach((row) => {
+        if (!map.has(row.month)) map.set(row.month, []);
+        map.get(row.month).push(row);
+      });
+      return [...map.entries()]
+        .sort((a, b) => a[0].localeCompare(b[0]))
+        .map(([month, items]) => ({
+          month,
+          label: monthLabel(month + "-01"),
+          items: items.slice().sort((a, b) => a.date.localeCompare(b.date)),
+          close: items.slice().sort((a, b) => a.date.localeCompare(b.date)).at(-1),
+        }));
+    }
+
     function groupByMonth(rows) {
       const map = new Map();
       rows.forEach((row) => {
@@ -878,6 +1065,8 @@
       buildFilters();
       const rows = getFilteredRows();
       const months = groupByMonth(rows);
+      const debtRows = (debtData.rows || []).filter((row) => row.date && (selectedYear === "all" || row.date.startsWith(selectedYear)));
+      const debtMonths = groupDebtRowsByMonth(debtRows);
 
       const totalNeto = rows.reduce((acc, row) => acc + (row.transferenciaCBU || 0), 0);
       const totalBruto = rows.reduce((acc, row) => acc + (row.remesasMutuales || 0), 0);
@@ -900,6 +1089,40 @@
 
       els.cantidad.textContent = fmtNum(rows.length);
       els.cantidadSub.textContent = `${fmtNum(months.length)} meses con actividad y ${fmtNum([...new Set(rows.map((row) => row.month))].length)} cierres mensuales.`;
+
+      const lastDebt = debtRows.slice().sort((a, b) => a.date.localeCompare(b.date)).at(-1);
+      if (lastDebt) {
+        els.debtCurrent.textContent = fmtMoney(lastDebt.gastos || 0);
+        els.debtCurrentDate.textContent = lastDebt.displayDate;
+        els.debtCurrentCount.textContent = fmtNum(lastDebt.cantidad || 0);
+        els.debtCurrentHonorarios.textContent = fmtMoney(lastDebt.honorarios || 0);
+        els.debtCurrentTotal.textContent = fmtMoney(lastDebt.total || 0);
+      } else {
+        els.debtCurrent.textContent = fmtMoney(0);
+        els.debtCurrentDate.textContent = "-";
+        els.debtCurrentCount.textContent = "-";
+        els.debtCurrentHonorarios.textContent = "-";
+        els.debtCurrentTotal.textContent = "-";
+      }
+
+      els.debtMonths.innerHTML = debtMonths.length
+        ? debtMonths.map((month) => `
+          <article class="debt-month-card">
+            <div class="debt-month-head">
+              <div class="debt-month-name">${month.label}</div>
+              <div class="debt-month-close">${fmtMoney(month.close?.gastos || 0)}</div>
+            </div>
+            <div class="debt-date-list">
+              ${month.items.map((row, idx) => `
+                <div class="debt-date-item ${idx === month.items.length - 1 ? "is-close" : ""}">
+                  <div class="debt-date">${row.displayDate}</div>
+                  <div class="debt-date-value">${fmtMoney(row.gastos || 0)}</div>
+                </div>
+              `).join("")}
+            </div>
+          </article>
+        `).join("")
+        : '<div class="empty">No hay deuda por fecha para este filtro.</div>';
 
       const maxMonth = Math.max(...months.map((month) => month.neto), 0);
       els.monthlyBars.innerHTML = months.length

@@ -1,0 +1,912 @@
+window.EQUIPO_998679_7 = {
+  "rows": [
+    {
+      "date": "2025-01-07",
+      "displayDate": "07/01/2025",
+      "month": "2025-01",
+      "matricula": "998679/7",
+      "cantidad": 3434,
+      "honorarios": 9579779.15,
+      "gastos": 28448680.04,
+      "total": 38028459.19,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20250107-equipos.w&equipo=b-42675962486849664268383d&por_os=20250107-liq_os.web&por_afi=20250107-liq_afi.web"
+    },
+    {
+      "date": "2025-01-14",
+      "displayDate": "14/01/2025",
+      "month": "2025-01",
+      "matricula": "998679/7",
+      "cantidad": 3399,
+      "honorarios": 9203758.47,
+      "gastos": 26394947.81,
+      "total": 35598706.28,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20250114-equipos.w&equipo=b-42675962486849664268383d&por_os=20250114-liq_os.web&por_afi=20250114-liq_afi.web"
+    },
+    {
+      "date": "2025-01-21",
+      "displayDate": "21/01/2025",
+      "month": "2025-01",
+      "matricula": "998679/7",
+      "cantidad": 2512,
+      "honorarios": 7770224.94,
+      "gastos": 22627196.4,
+      "total": 30397421.34,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20250121-equipos.w&equipo=b-42675962486849664268383d&por_os=20250121-liq_os.web&por_afi=20250121-liq_afi.web"
+    },
+    {
+      "date": "2025-01-28",
+      "displayDate": "28/01/2025",
+      "month": "2025-01",
+      "matricula": "998679/7",
+      "cantidad": 2262,
+      "honorarios": 6948504.61,
+      "gastos": 20075254.25,
+      "total": 27023758.86,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20250128-equipos.w&equipo=b-42675962486849664268383d&por_os=20250128-liq_os.web&por_afi=20250128-liq_afi.web"
+    },
+    {
+      "date": "2025-02-04",
+      "displayDate": "04/02/2025",
+      "month": "2025-02",
+      "matricula": "998679/7",
+      "cantidad": 2522,
+      "honorarios": 8462394.02,
+      "gastos": 23561850.33,
+      "total": 32024244.35,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20250204-equipos.w&equipo=b-42675962486849664268383d&por_os=20250204-liq_os.web&por_afi=20250204-liq_afi.web"
+    },
+    {
+      "date": "2025-02-11",
+      "displayDate": "11/02/2025",
+      "month": "2025-02",
+      "matricula": "998679/7",
+      "cantidad": 2349,
+      "honorarios": 7811139.09,
+      "gastos": 21603131.99,
+      "total": 29414271.08,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20250211-equipos.w&equipo=b-42675962486849664268383d&por_os=20250211-liq_os.web&por_afi=20250211-liq_afi.web"
+    },
+    {
+      "date": "2025-02-18",
+      "displayDate": "18/02/2025",
+      "month": "2025-02",
+      "matricula": "998679/7",
+      "cantidad": 2389,
+      "honorarios": 7847558.2,
+      "gastos": 20852047.99,
+      "total": 28699606.19,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20250218-equipos.w&equipo=b-42675962486849664268383d&por_os=20250218-liq_os.web&por_afi=20250218-liq_afi.web"
+    },
+    {
+      "date": "2025-02-25",
+      "displayDate": "25/02/2025",
+      "month": "2025-02",
+      "matricula": "998679/7",
+      "cantidad": 1926,
+      "honorarios": 6626553.06,
+      "gastos": 17614016.78,
+      "total": 24240569.84,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20250225-equipos.w&equipo=b-42675962486849664268383d&por_os=20250225-liq_os.web&por_afi=20250225-liq_afi.web"
+    },
+    {
+      "date": "2025-03-12",
+      "displayDate": "12/03/2025",
+      "month": "2025-03",
+      "matricula": "998679/7",
+      "cantidad": 2235,
+      "honorarios": 8017076.77,
+      "gastos": 21950191.82,
+      "total": 29967268.59,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20250312-equipos.w&equipo=b-42675962486849664268383d&por_os=20250312-liq_os.web&por_afi=20250312-liq_afi.web"
+    },
+    {
+      "date": "2025-03-18",
+      "displayDate": "18/03/2025",
+      "month": "2025-03",
+      "matricula": "998679/7",
+      "cantidad": 2823,
+      "honorarios": 8904027.27,
+      "gastos": 24026887.52,
+      "total": 32930914.79,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20250318-equipos.w&equipo=b-42675962486849664268383d&por_os=20250318-liq_os.web&por_afi=20250318-liq_afi.web"
+    },
+    {
+      "date": "2025-03-26",
+      "displayDate": "26/03/2025",
+      "month": "2025-03",
+      "matricula": "998679/7",
+      "cantidad": 1941,
+      "honorarios": 6787628.09,
+      "gastos": 18703097.38,
+      "total": 25490725.47,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20250326-equipos.w&equipo=b-42675962486849664268383d&por_os=20250326-liq_os.web&por_afi=20250326-liq_afi.web"
+    },
+    {
+      "date": "2025-04-01",
+      "displayDate": "01/04/2025",
+      "month": "2025-04",
+      "matricula": "998679/7",
+      "cantidad": 2065,
+      "honorarios": 6772169.69,
+      "gastos": 19624607.39,
+      "total": 26396777.08,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20250401-equipos.w&equipo=b-42675962486849664268383d&por_os=20250401-liq_os.web&por_afi=20250401-liq_afi.web"
+    },
+    {
+      "date": "2025-04-08",
+      "displayDate": "08/04/2025",
+      "month": "2025-04",
+      "matricula": "998679/7",
+      "cantidad": 2203,
+      "honorarios": 7544487.45,
+      "gastos": 21585250.04,
+      "total": 29129737.49,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20250408-equipos.w&equipo=b-42675962486849664268383d&por_os=20250408-liq_os.web&por_afi=20250408-liq_afi.web"
+    },
+    {
+      "date": "2025-04-14",
+      "displayDate": "14/04/2025",
+      "month": "2025-04",
+      "matricula": "998679/7",
+      "cantidad": 1753,
+      "honorarios": 6412909.25,
+      "gastos": 18969675.54,
+      "total": 25382584.79,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20250414-equipos.w&equipo=b-42675962486849664268383d&por_os=20250414-liq_os.web&por_afi=20250414-liq_afi.web"
+    },
+    {
+      "date": "2025-04-23",
+      "displayDate": "23/04/2025",
+      "month": "2025-04",
+      "matricula": "998679/7",
+      "cantidad": 1907,
+      "honorarios": 6929583.05,
+      "gastos": 21034233.18,
+      "total": 27963816.23,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20250423-equipos.w&equipo=b-42675962486849664268383d&por_os=20250423-liq_os.web&por_afi=20250423-liq_afi.web"
+    },
+    {
+      "date": "2025-04-28",
+      "displayDate": "28/04/2025",
+      "month": "2025-04",
+      "matricula": "998679/7",
+      "cantidad": 1509,
+      "honorarios": 5607458.04,
+      "gastos": 17240488.56,
+      "total": 22847946.6,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20250428-equipos.w&equipo=b-42675962486849664268383d&por_os=20250428-liq_os.web&por_afi=20250428-liq_afi.web"
+    },
+    {
+      "date": "2025-05-06",
+      "displayDate": "06/05/2025",
+      "month": "2025-05",
+      "matricula": "998679/7",
+      "cantidad": 2977,
+      "honorarios": 10082050.51,
+      "gastos": 29439150.33,
+      "total": 39521200.84,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20250506-equipos.w&equipo=b-42675962486849664268383d&por_os=20250506-liq_os.web&por_afi=20250506-liq_afi.web"
+    },
+    {
+      "date": "2025-05-13",
+      "displayDate": "13/05/2025",
+      "month": "2025-05",
+      "matricula": "998679/7",
+      "cantidad": 3127,
+      "honorarios": 10709470.83,
+      "gastos": 30236242.84,
+      "total": 40945713.67,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20250513-equipos.w&equipo=b-42675962486849664268383d&por_os=20250513-liq_os.web&por_afi=20250513-liq_afi.web"
+    },
+    {
+      "date": "2025-05-20",
+      "displayDate": "20/05/2025",
+      "month": "2025-05",
+      "matricula": "998679/7",
+      "cantidad": 2779,
+      "honorarios": 9865174.07,
+      "gastos": 28546321.02,
+      "total": 38411495.09,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20250520-equipos.w&equipo=b-42675962486849664268383d&por_os=20250520-liq_os.web&por_afi=20250520-liq_afi.web"
+    },
+    {
+      "date": "2025-05-27",
+      "displayDate": "27/05/2025",
+      "month": "2025-05",
+      "matricula": "998679/7",
+      "cantidad": 2604,
+      "honorarios": 9329265.95,
+      "gastos": 27035902.39,
+      "total": 36365168.34,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20250527-equipos.w&equipo=b-42675962486849664268383d&por_os=20250527-liq_os.web&por_afi=20250527-liq_afi.web"
+    },
+    {
+      "date": "2025-06-03",
+      "displayDate": "03/06/2025",
+      "month": "2025-06",
+      "matricula": "998679/7",
+      "cantidad": 3114,
+      "honorarios": 11770279.01,
+      "gastos": 34296037.46,
+      "total": 46066316.47,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20250603-equipos.w&equipo=b-42675962486849664268383d&por_os=20250603-liq_os.web&por_afi=20250603-liq_afi.web"
+    },
+    {
+      "date": "2025-06-10",
+      "displayDate": "10/06/2025",
+      "month": "2025-06",
+      "matricula": "998679/7",
+      "cantidad": 3581,
+      "honorarios": 12718150.94,
+      "gastos": 35812106.84,
+      "total": 48530257.78,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20250610-equipos.w&equipo=b-42675962486849664268383d&por_os=20250610-liq_os.web&por_afi=20250610-liq_afi.web"
+    },
+    {
+      "date": "2025-06-17",
+      "displayDate": "17/06/2025",
+      "month": "2025-06",
+      "matricula": "998679/7",
+      "cantidad": 3980,
+      "honorarios": 13671499.11,
+      "gastos": 38412272.67,
+      "total": 52083771.78,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20250617-equipos.w&equipo=b-42675962486849664268383d&por_os=20250617-liq_os.web&por_afi=20250617-liq_afi.web"
+    },
+    {
+      "date": "2025-06-24",
+      "displayDate": "24/06/2025",
+      "month": "2025-06",
+      "matricula": "998679/7",
+      "cantidad": 2975,
+      "honorarios": 10992847.27,
+      "gastos": 31598564.46,
+      "total": 42591411.73,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20250624-equipos.w&equipo=b-42675962486849664268383d&por_os=20250624-liq_os.web&por_afi=20250624-liq_afi.web"
+    },
+    {
+      "date": "2025-07-02",
+      "displayDate": "02/07/2025",
+      "month": "2025-07",
+      "matricula": "998679/7",
+      "cantidad": 4012,
+      "honorarios": 14817678.72,
+      "gastos": 41087385.05,
+      "total": 55905063.77,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20250702-equipos.w&equipo=b-42675962486849664268383d&por_os=20250702-liq_os.web&por_afi=20250702-liq_afi.web"
+    },
+    {
+      "date": "2025-07-08",
+      "displayDate": "08/07/2025",
+      "month": "2025-07",
+      "matricula": "998679/7",
+      "cantidad": 4030,
+      "honorarios": 14813902.53,
+      "gastos": 41318389.19,
+      "total": 56132291.72,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20250708-equipos.w&equipo=b-42675962486849664268383d&por_os=20250708-liq_os.web&por_afi=20250708-liq_afi.web"
+    },
+    {
+      "date": "2025-07-15",
+      "displayDate": "15/07/2025",
+      "month": "2025-07",
+      "matricula": "998679/7",
+      "cantidad": 3362,
+      "honorarios": 12855592.35,
+      "gastos": 36156148.29,
+      "total": 49011740.64,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20250715-equipos.w&equipo=b-42675962486849664268383d&por_os=20250715-liq_os.web&por_afi=20250715-liq_afi.web"
+    },
+    {
+      "date": "2025-07-22",
+      "displayDate": "22/07/2025",
+      "month": "2025-07",
+      "matricula": "998679/7",
+      "cantidad": 3077,
+      "honorarios": 11764909.49,
+      "gastos": 33859097,
+      "total": 45624006.49,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20250722-equipos.w&equipo=b-42675962486849664268383d&por_os=20250722-liq_os.web&por_afi=20250722-liq_afi.web"
+    },
+    {
+      "date": "2025-07-29",
+      "displayDate": "29/07/2025",
+      "month": "2025-07",
+      "matricula": "998679/7",
+      "cantidad": 2596,
+      "honorarios": 9728417.76,
+      "gastos": 28215149.8,
+      "total": 37943567.56,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20250729-equipos.w&equipo=b-42675962486849664268383d&por_os=20250729-liq_os.web&por_afi=20250729-liq_afi.web"
+    },
+    {
+      "date": "2025-08-05",
+      "displayDate": "05/08/2025",
+      "month": "2025-08",
+      "matricula": "998679/7",
+      "cantidad": 3902,
+      "honorarios": 14374309.61,
+      "gastos": 40600168.13,
+      "total": 54974477.74,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20250805-equipos.w&equipo=b-42675962486849664268383d&por_os=20250805-liq_os.web&por_afi=20250805-liq_afi.web"
+    },
+    {
+      "date": "2025-08-12",
+      "displayDate": "12/08/2025",
+      "month": "2025-08",
+      "matricula": "998679/7",
+      "cantidad": 3862,
+      "honorarios": 14145808.42,
+      "gastos": 40103554.79,
+      "total": 54249363.21,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20250812-equipos.w&equipo=b-42675962486849664268383d&por_os=20250812-liq_os.web&por_afi=20250812-liq_afi.web"
+    },
+    {
+      "date": "2025-08-19",
+      "displayDate": "19/08/2025",
+      "month": "2025-08",
+      "matricula": "998679/7",
+      "cantidad": 4161,
+      "honorarios": 15187079.34,
+      "gastos": 43027126.55,
+      "total": 58214205.89,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20250819-equipos.w&equipo=b-42675962486849664268383d&por_os=20250819-liq_os.web&por_afi=20250819-liq_afi.web"
+    },
+    {
+      "date": "2025-08-26",
+      "displayDate": "26/08/2025",
+      "month": "2025-08",
+      "matricula": "998679/7",
+      "cantidad": 2759,
+      "honorarios": 10605180.41,
+      "gastos": 30565686.58,
+      "total": 41170866.99,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20250826-equipos.w&equipo=b-42675962486849664268383d&por_os=20250826-liq_os.web&por_afi=20250826-liq_afi.web"
+    },
+    {
+      "date": "2025-09-02",
+      "displayDate": "02/09/2025",
+      "month": "2025-09",
+      "matricula": "998679/7",
+      "cantidad": 3213,
+      "honorarios": 12261474.98,
+      "gastos": 35627354,
+      "total": 47888828.98,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20250902-equipos.w&equipo=b-42675962486849664268383d&por_os=20250902-liq_os.web&por_afi=20250902-liq_afi.web"
+    },
+    {
+      "date": "2025-09-09",
+      "displayDate": "09/09/2025",
+      "month": "2025-09",
+      "matricula": "998679/7",
+      "cantidad": 4015,
+      "honorarios": 14417071.45,
+      "gastos": 40864852.53,
+      "total": 55281923.98,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20250909-equipos.w&equipo=b-42675962486849664268383d&por_os=20250909-liq_os.web&por_afi=20250909-liq_afi.web"
+    },
+    {
+      "date": "2025-09-16",
+      "displayDate": "16/09/2025",
+      "month": "2025-09",
+      "matricula": "998679/7",
+      "cantidad": 4244,
+      "honorarios": 15165383.43,
+      "gastos": 42855619.96,
+      "total": 58021003.39,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20250916-equipos.w&equipo=b-42675962486849664268383d&por_os=20250916-liq_os.web&por_afi=20250916-liq_afi.web"
+    },
+    {
+      "date": "2025-09-23",
+      "displayDate": "23/09/2025",
+      "month": "2025-09",
+      "matricula": "998679/7",
+      "cantidad": 2981,
+      "honorarios": 11578517.68,
+      "gastos": 33224083.76,
+      "total": 44802601.44,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20250923-equipos.w&equipo=b-42675962486849664268383d&por_os=20250923-liq_os.web&por_afi=20250923-liq_afi.web"
+    },
+    {
+      "date": "2025-10-07",
+      "displayDate": "07/10/2025",
+      "month": "2025-10",
+      "matricula": "998679/7",
+      "cantidad": 4086,
+      "honorarios": 16001996.35,
+      "gastos": 44103500.52,
+      "total": 60105496.87,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20251007-equipos.w&equipo=b-42675962486849664268383d&por_os=20251007-liq_os.web&por_afi=20251007-liq_afi.web"
+    },
+    {
+      "date": "2025-10-14",
+      "displayDate": "14/10/2025",
+      "month": "2025-10",
+      "matricula": "998679/7",
+      "cantidad": 4119,
+      "honorarios": 15597292.02,
+      "gastos": 42649675.27,
+      "total": 58246967.29,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20251014-equipos.w&equipo=b-42675962486849664268383d&por_os=20251014-liq_os.web&por_afi=20251014-liq_afi.web"
+    },
+    {
+      "date": "2025-10-21",
+      "displayDate": "21/10/2025",
+      "month": "2025-10",
+      "matricula": "998679/7",
+      "cantidad": 3036,
+      "honorarios": 12661915.41,
+      "gastos": 35084624.55,
+      "total": 47746539.96,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20251021-equipos.w&equipo=b-42675962486849664268383d&por_os=20251021-liq_os.web&por_afi=20251021-liq_afi.web"
+    },
+    {
+      "date": "2025-10-28",
+      "displayDate": "28/10/2025",
+      "month": "2025-10",
+      "matricula": "998679/7",
+      "cantidad": 2950,
+      "honorarios": 11864287.47,
+      "gastos": 33340868.82,
+      "total": 45205156.29,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20251028-equipos.w&equipo=b-42675962486849664268383d&por_os=20251028-liq_os.web&por_afi=20251028-liq_afi.web"
+    },
+    {
+      "date": "2025-11-04",
+      "displayDate": "04/11/2025",
+      "month": "2025-11",
+      "matricula": "998679/7",
+      "cantidad": 4078,
+      "honorarios": 16447818.53,
+      "gastos": 45044062.31,
+      "total": 61491880.84,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20251104-equipos.w&equipo=b-42675962486849664268383d&por_os=20251104-liq_os.web&por_afi=20251104-liq_afi.web"
+    },
+    {
+      "date": "2025-11-11",
+      "displayDate": "11/11/2025",
+      "month": "2025-11",
+      "matricula": "998679/7",
+      "cantidad": 4053,
+      "honorarios": 15980362.61,
+      "gastos": 43962169.19,
+      "total": 59942531.8,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20251111-equipos.w&equipo=b-42675962486849664268383d&por_os=20251111-liq_os.web&por_afi=20251111-liq_afi.web"
+    },
+    {
+      "date": "2025-11-18",
+      "displayDate": "18/11/2025",
+      "month": "2025-11",
+      "matricula": "998679/7",
+      "cantidad": 4177,
+      "honorarios": 15704882.62,
+      "gastos": 43103857.75,
+      "total": 58808740.37,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20251118-equipos.w&equipo=b-42675962486849664268383d&por_os=20251118-liq_os.web&por_afi=20251118-liq_afi.web"
+    },
+    {
+      "date": "2025-11-26",
+      "displayDate": "26/11/2025",
+      "month": "2025-11",
+      "matricula": "998679/7",
+      "cantidad": 3323,
+      "honorarios": 13189947.62,
+      "gastos": 37102512.86,
+      "total": 50292460.48,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20251126-equipos.w&equipo=b-42675962486849664268383d&por_os=20251126-liq_os.web&por_afi=20251126-liq_afi.web"
+    },
+    {
+      "date": "2025-12-02",
+      "displayDate": "02/12/2025",
+      "month": "2025-12",
+      "matricula": "998679/7",
+      "cantidad": 4303,
+      "honorarios": 17631057.08,
+      "gastos": 47283424.51,
+      "total": 64914481.59,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20251202-equipos.w&equipo=b-42675962486849664268383d&por_os=20251202-liq_os.web&por_afi=20251202-liq_afi.web"
+    },
+    {
+      "date": "2025-12-09",
+      "displayDate": "09/12/2025",
+      "month": "2025-12",
+      "matricula": "998679/7",
+      "cantidad": 3790,
+      "honorarios": 15840118.79,
+      "gastos": 42740873.05,
+      "total": 58580991.84,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20251209-equipos.w&equipo=b-42675962486849664268383d&por_os=20251209-liq_os.web&por_afi=20251209-liq_afi.web"
+    },
+    {
+      "date": "2025-12-16",
+      "displayDate": "16/12/2025",
+      "month": "2025-12",
+      "matricula": "998679/7",
+      "cantidad": 3505,
+      "honorarios": 14581299.36,
+      "gastos": 38318579.91,
+      "total": 52899879.27,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20251216-equipos.w&equipo=b-42675962486849664268383d&por_os=20251216-liq_os.web&por_afi=20251216-liq_afi.web"
+    },
+    {
+      "date": "2025-12-26",
+      "displayDate": "26/12/2025",
+      "month": "2025-12",
+      "matricula": "998679/7",
+      "cantidad": 2855,
+      "honorarios": 12413549.56,
+      "gastos": 33545929.45,
+      "total": 45959479.01,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20251226-equipos.w&equipo=b-42675962486849664268383d&por_os=20251226-liq_os.web&por_afi=20251226-liq_afi.web"
+    },
+    {
+      "date": "2026-01-06",
+      "displayDate": "06/01/2026",
+      "month": "2026-01",
+      "matricula": "998679/7",
+      "cantidad": 3630,
+      "honorarios": 14712083.97,
+      "gastos": 40624778.49,
+      "total": 55336862.46,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20260106-equipos.w&equipo=b-42675962486849664268383d&por_os=20260106-liq_os.web&por_afi=20260106-liq_afi.web"
+    },
+    {
+      "date": "2026-01-13",
+      "displayDate": "13/01/2026",
+      "month": "2026-01",
+      "matricula": "998679/7",
+      "cantidad": 3736,
+      "honorarios": 15132272.42,
+      "gastos": 41549473.04,
+      "total": 56681745.46,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20260113-equipos.w&equipo=b-42675962486849664268383d&por_os=20260113-liq_os.web&por_afi=20260113-liq_afi.web"
+    },
+    {
+      "date": "2026-01-15",
+      "displayDate": "15/01/2026",
+      "month": "2026-01",
+      "matricula": "998679/7",
+      "cantidad": 3433,
+      "honorarios": 14712027.37,
+      "gastos": 40858916.63,
+      "total": 55570944,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20260115-equipos.w&equipo=b-42675962486849664268383d&por_os=20260115-liq_os.web&por_afi=20260115-liq_afi.web"
+    },
+    {
+      "date": "2026-01-20",
+      "displayDate": "20/01/2026",
+      "month": "2026-01",
+      "matricula": "998679/7",
+      "cantidad": 3157,
+      "honorarios": 13611622.04,
+      "gastos": 37957027.2,
+      "total": 51568649.24,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20260120-equipos.w&equipo=b-42675962486849664268383d&por_os=20260120-liq_os.web&por_afi=20260120-liq_afi.web"
+    },
+    {
+      "date": "2026-01-27",
+      "displayDate": "27/01/2026",
+      "month": "2026-01",
+      "matricula": "998679/7",
+      "cantidad": 2446,
+      "honorarios": 11007670.98,
+      "gastos": 31831908.6,
+      "total": 42839579.58,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20260127-equipos.w&equipo=b-42675962486849664268383d&por_os=20260127-liq_os.web&por_afi=20260127-liq_afi.web"
+    },
+    {
+      "date": "2026-02-03",
+      "displayDate": "03/02/2026",
+      "month": "2026-02",
+      "matricula": "998679/7",
+      "cantidad": 2982,
+      "honorarios": 13383555.02,
+      "gastos": 36466662.12,
+      "total": 49850217.14,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20260203-equipos.w&equipo=b-42675962486849664268383d&por_os=20260203-liq_os.web&por_afi=20260203-liq_afi.web"
+    },
+    {
+      "date": "2026-02-10",
+      "displayDate": "10/02/2026",
+      "month": "2026-02",
+      "matricula": "998679/7",
+      "cantidad": 2831,
+      "honorarios": 12733194.41,
+      "gastos": 35277764.4,
+      "total": 48010958.81,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20260210-equipos.w&equipo=b-42675962486849664268383d&por_os=20260210-liq_os.web&por_afi=20260210-liq_afi.web"
+    },
+    {
+      "date": "2026-02-18",
+      "displayDate": "18/02/2026",
+      "month": "2026-02",
+      "matricula": "998679/7",
+      "cantidad": 2839,
+      "honorarios": 12586915.03,
+      "gastos": 34598710.33,
+      "total": 47185625.36,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20260218-equipos.w&equipo=b-42675962486849664268383d&por_os=20260218-liq_os.web&por_afi=20260218-liq_afi.web"
+    },
+    {
+      "date": "2026-02-25",
+      "displayDate": "25/02/2026",
+      "month": "2026-02",
+      "matricula": "998679/7",
+      "cantidad": 2112,
+      "honorarios": 10083591.28,
+      "gastos": 28688437.88,
+      "total": 38772029.16,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20260225-equipos.w&equipo=b-42675962486849664268383d&por_os=20260225-liq_os.web&por_afi=20260225-liq_afi.web"
+    },
+    {
+      "date": "2026-03-04",
+      "displayDate": "04/03/2026",
+      "month": "2026-03",
+      "matricula": "998679/7",
+      "cantidad": 2935,
+      "honorarios": 13258340.45,
+      "gastos": 36677604.29,
+      "total": 49935944.74,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20260304-equipos.w&equipo=b-42675962486849664268383d&por_os=20260304-liq_os.web&por_afi=20260304-liq_afi.web"
+    },
+    {
+      "date": "2026-03-10",
+      "displayDate": "10/03/2026",
+      "month": "2026-03",
+      "matricula": "998679/7",
+      "cantidad": 2792,
+      "honorarios": 12286161.87,
+      "gastos": 33927792.16,
+      "total": 46213954.03,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20260310-equipos.w&equipo=b-42675962486849664268383d&por_os=20260310-liq_os.web&por_afi=20260310-liq_afi.web"
+    },
+    {
+      "date": "2026-03-17",
+      "displayDate": "17/03/2026",
+      "month": "2026-03",
+      "matricula": "998679/7",
+      "cantidad": 2886,
+      "honorarios": 12259164.46,
+      "gastos": 36080423.18,
+      "total": 48339587.64,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20260317-equipos.w&equipo=b-42675962486849664268383d&por_os=20260317-liq_os.web&por_afi=20260317-liq_afi.web"
+    },
+    {
+      "date": "2026-03-25",
+      "displayDate": "25/03/2026",
+      "month": "2026-03",
+      "matricula": "998679/7",
+      "cantidad": 2850,
+      "honorarios": 11941844.29,
+      "gastos": 35134438.76,
+      "total": 47076283.05,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20260325-equipos.w&equipo=b-42675962486849664268383d&por_os=20260325-liq_os.web&por_afi=20260325-liq_afi.web"
+    },
+    {
+      "date": "2026-03-27",
+      "displayDate": "27/03/2026",
+      "month": "2026-03",
+      "matricula": "998679/7",
+      "cantidad": 2389,
+      "honorarios": 10095645.2,
+      "gastos": 31201808.97,
+      "total": 41297454.17,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20260327-equipos.w&equipo=b-42675962486849664268383d&por_os=20260327-liq_os.web&por_afi=20260327-liq_afi.web"
+    },
+    {
+      "date": "2026-04-07",
+      "displayDate": "07/04/2026",
+      "month": "2026-04",
+      "matricula": "998679/7",
+      "cantidad": 3466,
+      "honorarios": 14776191.11,
+      "gastos": 42872090.01,
+      "total": 57648281.12,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20260407-equipos.w&equipo=b-42675962486849664268383d&por_os=20260407-liq_os.web&por_afi=20260407-liq_afi.web"
+    },
+    {
+      "date": "2026-04-14",
+      "displayDate": "14/04/2026",
+      "month": "2026-04",
+      "matricula": "998679/7",
+      "cantidad": 3379,
+      "honorarios": 14020708.21,
+      "gastos": 40374731.82,
+      "total": 54395440.03,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20260414-equipos.w&equipo=b-42675962486849664268383d&por_os=20260414-liq_os.web&por_afi=20260414-liq_afi.web"
+    },
+    {
+      "date": "2026-04-15",
+      "displayDate": "15/04/2026",
+      "month": "2026-04",
+      "matricula": "998679/7",
+      "cantidad": 3263,
+      "honorarios": 13791515.35,
+      "gastos": 39883439.97,
+      "total": 53674955.32,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20260415-equipos.w&equipo=b-42675962486849664268383d&por_os=20260415-liq_os.web&por_afi=20260415-liq_afi.web"
+    },
+    {
+      "date": "2026-04-21",
+      "displayDate": "21/04/2026",
+      "month": "2026-04",
+      "matricula": "998679/7",
+      "cantidad": 3139,
+      "honorarios": 13414108.56,
+      "gastos": 38639032.61,
+      "total": 52053141.17,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20260421-equipos.w&equipo=b-42675962486849664268383d&por_os=20260421-liq_os.web&por_afi=20260421-liq_afi.web"
+    },
+    {
+      "date": "2026-04-28",
+      "displayDate": "28/04/2026",
+      "month": "2026-04",
+      "matricula": "998679/7",
+      "cantidad": 2370,
+      "honorarios": 10588175.26,
+      "gastos": 31935156.62,
+      "total": 42523331.88,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20260428-equipos.w&equipo=b-42675962486849664268383d&por_os=20260428-liq_os.web&por_afi=20260428-liq_afi.web"
+    },
+    {
+      "date": "2026-05-05",
+      "displayDate": "05/05/2026",
+      "month": "2026-05",
+      "matricula": "998679/7",
+      "cantidad": 3763,
+      "honorarios": 16979781.2,
+      "gastos": 49354324.98,
+      "total": 66334106.18,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20260505-equipos.w&equipo=b-42675962486849664268383d&por_os=20260505-liq_os.web&por_afi=20260505-liq_afi.web"
+    },
+    {
+      "date": "2026-05-12",
+      "displayDate": "12/05/2026",
+      "month": "2026-05",
+      "matricula": "998679/7",
+      "cantidad": 3654,
+      "honorarios": 16235532,
+      "gastos": 47030966.18,
+      "total": 63266498.18,
+      "url": "https://www.ambb.org.ar/internos/liq-nue/armar-liqui.php?liqui=20260512-equipos.w&equipo=b-42675962486849664268383d&por_os=20260512-liq_os.web&por_afi=20260512-liq_afi.web"
+    }
+  ],
+  "monthly": [
+    {
+      "month": "2025-01",
+      "cantidad": 11607,
+      "honorarios": 33502267.17,
+      "gastos": 97546078.5,
+      "total": 131048345.67,
+      "liquidaciones": 4
+    },
+    {
+      "month": "2025-02",
+      "cantidad": 9186,
+      "honorarios": 30747644.369999997,
+      "gastos": 83631047.08999999,
+      "total": 114378691.46000001,
+      "liquidaciones": 4
+    },
+    {
+      "month": "2025-03",
+      "cantidad": 6999,
+      "honorarios": 23708732.13,
+      "gastos": 64680176.72,
+      "total": 88388908.85,
+      "liquidaciones": 3
+    },
+    {
+      "month": "2025-04",
+      "cantidad": 9437,
+      "honorarios": 33266607.48,
+      "gastos": 98454254.71000001,
+      "total": 131720862.19,
+      "liquidaciones": 5
+    },
+    {
+      "month": "2025-05",
+      "cantidad": 11487,
+      "honorarios": 39985961.36,
+      "gastos": 115257616.58,
+      "total": 155243577.94,
+      "liquidaciones": 4
+    },
+    {
+      "month": "2025-06",
+      "cantidad": 13650,
+      "honorarios": 49152776.33,
+      "gastos": 140118981.43,
+      "total": 189271757.76,
+      "liquidaciones": 4
+    },
+    {
+      "month": "2025-07",
+      "cantidad": 17077,
+      "honorarios": 63980500.85,
+      "gastos": 180636169.33,
+      "total": 244616670.18,
+      "liquidaciones": 5
+    },
+    {
+      "month": "2025-08",
+      "cantidad": 14684,
+      "honorarios": 54312377.78,
+      "gastos": 154296536.05,
+      "total": 208608913.83,
+      "liquidaciones": 4
+    },
+    {
+      "month": "2025-09",
+      "cantidad": 14453,
+      "honorarios": 53422447.54,
+      "gastos": 152571910.25,
+      "total": 205994357.79,
+      "liquidaciones": 4
+    },
+    {
+      "month": "2025-10",
+      "cantidad": 14191,
+      "honorarios": 56125491.25,
+      "gastos": 155178669.16,
+      "total": 211304160.41,
+      "liquidaciones": 4
+    },
+    {
+      "month": "2025-11",
+      "cantidad": 15631,
+      "honorarios": 61323011.379999995,
+      "gastos": 169212602.11,
+      "total": 230535613.48999998,
+      "liquidaciones": 4
+    },
+    {
+      "month": "2025-12",
+      "cantidad": 14453,
+      "honorarios": 60466024.79,
+      "gastos": 161888806.92,
+      "total": 222354831.71,
+      "liquidaciones": 4
+    },
+    {
+      "month": "2026-01",
+      "cantidad": 16402,
+      "honorarios": 69175676.78,
+      "gastos": 192822103.96,
+      "total": 261997780.74,
+      "liquidaciones": 5
+    },
+    {
+      "month": "2026-02",
+      "cantidad": 10764,
+      "honorarios": 48787255.74,
+      "gastos": 135031574.73,
+      "total": 183818830.47,
+      "liquidaciones": 4
+    },
+    {
+      "month": "2026-03",
+      "cantidad": 13852,
+      "honorarios": 59841156.269999996,
+      "gastos": 173022067.35999998,
+      "total": 232863223.63000005,
+      "liquidaciones": 5
+    },
+    {
+      "month": "2026-04",
+      "cantidad": 15617,
+      "honorarios": 66590698.49,
+      "gastos": 193704451.03,
+      "total": 260295149.51999998,
+      "liquidaciones": 5
+    },
+    {
+      "month": "2026-05",
+      "cantidad": 7417,
+      "honorarios": 33215313.2,
+      "gastos": 96385291.16,
+      "total": 129600604.36,
+      "liquidaciones": 2
+    }
+  ]
+};
