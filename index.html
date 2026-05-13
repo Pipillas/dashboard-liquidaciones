@@ -507,9 +507,11 @@
     .debt-panel {
       padding: 24px;
       border-radius: 22px;
-      background: linear-gradient(160deg, rgba(180, 83, 9, 0.12), rgba(15, 118, 110, 0.08));
-      border: 1px solid rgba(180, 83, 9, 0.12);
-      box-shadow: 0 14px 30px rgba(31, 41, 51, 0.05);
+      background:
+        radial-gradient(circle at top right, rgba(255,255,255,0.28), transparent 36%),
+        linear-gradient(160deg, rgba(180, 83, 9, 0.14), rgba(15, 118, 110, 0.1));
+      border: 1px solid rgba(180, 83, 9, 0.14);
+      box-shadow: 0 18px 34px rgba(31, 41, 51, 0.07);
     }
 
     .debt-kicker {
@@ -522,12 +524,35 @@
 
     .debt-matricula {
       margin-top: 8px;
-      font-size: 1.55rem;
+      font-size: 1.45rem;
       font-weight: 800;
       line-height: 1.1;
     }
 
-    .debt-amount {
+    .debt-stack {
+      margin-top: 18px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .debt-stat {
+      padding: 14px 16px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.52);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      backdrop-filter: blur(8px);
+    }
+
+    .debt-stat-label {
+      color: var(--muted);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 800;
+    }
+
+    .debt-amount,
+    .debt-amount-soft {
       margin-top: 14px;
       font-size: clamp(1.55rem, 2.4vw, 2.25rem);
       font-weight: 800;
@@ -537,8 +562,19 @@
       font-variant-numeric: tabular-nums;
     }
 
+    .debt-amount-soft {
+      color: var(--accent);
+    }
+
+    .debt-caption {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 0.86rem;
+      line-height: 1.5;
+    }
+
     .debt-meta {
-      margin-top: 16px;
+      margin-top: 18px;
       display: grid;
       gap: 10px;
     }
@@ -571,6 +607,7 @@
       background: rgba(255, 255, 255, 0.9);
       border: 1px solid rgba(15, 118, 110, 0.1);
       min-width: 0;
+      box-shadow: 0 10px 24px rgba(31, 41, 51, 0.04);
     }
 
     .debt-month-head {
@@ -592,8 +629,10 @@
       font-weight: 800;
       font-size: 0.84rem;
       text-align: right;
-      white-space: nowrap;
       font-variant-numeric: tabular-nums;
+      display: grid;
+      gap: 4px;
+      white-space: nowrap;
     }
 
     .debt-date-list {
@@ -605,8 +644,8 @@
       display: flex;
       justify-content: space-between;
       gap: 12px;
-      align-items: baseline;
-      padding: 9px 10px;
+      align-items: center;
+      padding: 10px 12px;
       border-radius: 12px;
       background: rgba(15, 118, 110, 0.05);
     }
@@ -622,13 +661,34 @@
       white-space: nowrap;
     }
 
-    .debt-date-value {
+    .debt-date-values {
+      display: grid;
+      gap: 4px;
+      justify-items: end;
+      min-width: 0;
+    }
+
+    .debt-date-value,
+    .debt-date-net {
       color: var(--ink);
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       font-weight: 800;
       white-space: nowrap;
       text-align: right;
       font-variant-numeric: tabular-nums;
+    }
+
+    .debt-date-net {
+      color: var(--accent);
+      font-size: 0.8rem;
+    }
+
+    .debt-mini {
+      color: var(--muted);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 800;
     }
 
     .table-wrap {
@@ -818,12 +878,24 @@
         <aside class="debt-panel">
           <div class="debt-kicker">Saldo actual</div>
           <div class="debt-matricula">Matricula 998679/7</div>
-          <div class="debt-amount" id="debt-current"></div>
+          <div class="debt-stack">
+            <div class="debt-stat">
+              <div class="debt-stat-label">Gastos bruto</div>
+              <div class="debt-amount" id="debt-current"></div>
+              <div class="debt-caption">Saldo sujeto a retenciones al ultimo corte visible.</div>
+            </div>
+            <div class="debt-stat">
+              <div class="debt-stat-label">Neto estimado</div>
+              <div class="debt-amount-soft" id="debt-current-net"></div>
+              <div class="debt-caption">Aprox. usando tu tasa historica real de cobro neto.</div>
+            </div>
+          </div>
           <div class="debt-meta">
             <div class="debt-meta-row"><span>Ultimo corte</span><strong id="debt-current-date"></strong></div>
             <div class="debt-meta-row"><span>Prestaciones</span><strong id="debt-current-count"></strong></div>
             <div class="debt-meta-row"><span>Honorarios</span><strong id="debt-current-honorarios"></strong></div>
             <div class="debt-meta-row"><span>Total liquidado</span><strong id="debt-current-total"></strong></div>
+            <div class="debt-meta-row"><span>Tasa neta aplicada</span><strong id="debt-net-ratio"></strong></div>
           </div>
         </aside>
         <div class="debt-months" id="debt-months"></div>
@@ -948,10 +1020,12 @@
       cantidad: document.getElementById("kpi-cantidad"),
       cantidadSub: document.getElementById("kpi-cantidad-sub"),
       debtCurrent: document.getElementById("debt-current"),
+      debtCurrentNet: document.getElementById("debt-current-net"),
       debtCurrentDate: document.getElementById("debt-current-date"),
       debtCurrentCount: document.getElementById("debt-current-count"),
       debtCurrentHonorarios: document.getElementById("debt-current-honorarios"),
       debtCurrentTotal: document.getElementById("debt-current-total"),
+      debtNetRatio: document.getElementById("debt-net-ratio"),
       debtMonths: document.getElementById("debt-months"),
       monthlyBars: document.getElementById("monthly-bars"),
       deductions: document.getElementById("deductions"),
@@ -1087,6 +1161,7 @@
       const totalDescuentos = rows.reduce((acc, row) => acc + ((row.remesasMutuales || 0) - (row.transferenciaCBU || 0)), 0);
       const average = rows.length ? totalNeto / rows.length : 0;
       const ratio = totalBruto ? (totalNeto / totalBruto) * 100 : 0;
+      const debtNetRatio = totalBruto ? totalNeto / totalBruto : 0;
 
       els.toolbarNote.textContent = selectedYear === "all"
         ? "Vista consolidada de 2025 completo y 2026 hasta mayo."
@@ -1107,16 +1182,20 @@
       const lastDebt = debtRows.slice().sort((a, b) => a.date.localeCompare(b.date)).at(-1);
       if (lastDebt) {
         els.debtCurrent.textContent = fmtMoney(lastDebt.gastos || 0);
+        els.debtCurrentNet.textContent = fmtMoney((lastDebt.gastos || 0) * debtNetRatio);
         els.debtCurrentDate.textContent = lastDebt.displayDate;
         els.debtCurrentCount.textContent = fmtNum(lastDebt.cantidad || 0);
         els.debtCurrentHonorarios.textContent = fmtMoney(lastDebt.honorarios || 0);
         els.debtCurrentTotal.textContent = fmtMoney(lastDebt.total || 0);
+        els.debtNetRatio.textContent = `${(debtNetRatio * 100).toFixed(2).replace(".", ",")}%`;
       } else {
         els.debtCurrent.textContent = fmtMoney(0);
+        els.debtCurrentNet.textContent = fmtMoney(0);
         els.debtCurrentDate.textContent = "-";
         els.debtCurrentCount.textContent = "-";
         els.debtCurrentHonorarios.textContent = "-";
         els.debtCurrentTotal.textContent = "-";
+        els.debtNetRatio.textContent = "-";
       }
 
       els.debtMonths.innerHTML = debtMonths.length
@@ -1124,13 +1203,19 @@
           <article class="debt-month-card">
             <div class="debt-month-head">
               <div class="debt-month-name">${month.label}</div>
-              <div class="debt-month-close">${fmtMoney(month.close?.gastos || 0)}</div>
+              <div class="debt-month-close">
+                <span class="debt-mini">Cierre bruto</span>
+                <span>${fmtMoney(month.close?.gastos || 0)}</span>
+              </div>
             </div>
             <div class="debt-date-list">
               ${month.items.map((row, idx) => `
                 <div class="debt-date-item ${idx === month.items.length - 1 ? "is-close" : ""}">
                   <div class="debt-date">${row.displayDate}</div>
-                  <div class="debt-date-value">${fmtMoney(row.gastos || 0)}</div>
+                  <div class="debt-date-values">
+                    <div class="debt-date-value">${fmtMoney(row.gastos || 0)}</div>
+                    <div class="debt-date-net">Neto est. ${fmtMoney((row.gastos || 0) * debtNetRatio)}</div>
+                  </div>
                 </div>
               `).join("")}
             </div>
