@@ -1066,7 +1066,7 @@
       <div class="section-head">
         <div>
           <h2 class="section-title">Relacion deuda vs cobro</h2>
-          <p class="section-copy">Comparacion entre el cierre de deuda neta estimada del equipo 998679/7 y lo que realmente cobraste neto en ese mes. Aca se ve rapido si cobraste el 20%, el 35% o mas de la deuda vigente.</p>
+          <p class="section-copy">Comparacion entre la deuda con la que arranca cada mes para el equipo 998679/7 y lo que realmente cobraste neto en ese mismo mes. Aca se ve rapido que proporcion de la deuda inicial quedo cubierta.</p>
         </div>
       </div>
       <div class="coverage-grid" id="coverage-grid"></div>
@@ -1259,32 +1259,38 @@
           month: month.month,
           label: month.label,
           cobradoNeto: month.neto,
-          deudaBruta: 0,
-          deudaNetaEstimada: 0,
+          deudaBrutaInicio: 0,
+          deudaNetaInicioEstimada: 0,
           cobertura: 0,
           multiple: 0,
-          closeDate: null,
+          startDate: null,
+          startMode: null,
         });
       });
+      let previousClose = null;
       debtMonths.forEach((month) => {
         const current = map.get(month.month) || {
           month: month.month,
           label: month.label,
           cobradoNeto: 0,
-          deudaBruta: 0,
-          deudaNetaEstimada: 0,
+          deudaBrutaInicio: 0,
+          deudaNetaInicioEstimada: 0,
           cobertura: 0,
           multiple: 0,
-          closeDate: null,
+          startDate: null,
+          startMode: null,
         };
-        current.deudaBruta = month.close?.gastos || 0;
-        current.deudaNetaEstimada = current.deudaBruta * debtNetRatio;
-        current.closeDate = month.close?.displayDate || null;
+        const startBase = previousClose || month.items[0] || null;
+        current.deudaBrutaInicio = startBase?.gastos || 0;
+        current.deudaNetaInicioEstimada = current.deudaBrutaInicio * debtNetRatio;
+        current.startDate = startBase?.displayDate || null;
+        current.startMode = previousClose ? "carry" : "first-visible";
         map.set(month.month, current);
+        previousClose = month.close || previousClose;
       });
       return [...map.values()].sort((a, b) => a.month.localeCompare(b.month)).map((item) => {
-        const cobertura = item.deudaNetaEstimada ? item.cobradoNeto / item.deudaNetaEstimada : 0;
-        const multiple = item.cobradoNeto ? item.deudaNetaEstimada / item.cobradoNeto : 0;
+        const cobertura = item.deudaNetaInicioEstimada ? item.cobradoNeto / item.deudaNetaInicioEstimada : 0;
+        const multiple = item.cobradoNeto ? item.deudaNetaInicioEstimada / item.cobradoNeto : 0;
         return { ...item, cobertura, multiple };
       });
     }
@@ -1447,6 +1453,7 @@
         ? coverageMonths.map((month) => {
           const pct = month.cobertura * 100;
           const pillClass = pct >= 40 ? "good" : "warn";
+          const startLabel = month.startMode === "carry" ? "Base inicial" : "Primer corte visible";
           return `
             <article class="coverage-card">
               <div class="coverage-head">
@@ -1454,10 +1461,11 @@
                 <div class="coverage-pill ${pillClass}">${pct.toFixed(1).replace(".", ",")}% cubierto</div>
               </div>
               <div class="coverage-lines">
-                <div class="coverage-line"><span>Deuda neta estimada</span><strong>${fmtMoney(month.deudaNetaEstimada)}</strong></div>
+                <div class="coverage-line"><span>Deuda bruta inicial</span><strong>${fmtMoney(month.deudaBrutaInicio)}</strong></div>
+                <div class="coverage-line"><span>Deuda neta inicial est.</span><strong>${fmtMoney(month.deudaNetaInicioEstimada)}</strong></div>
                 <div class="coverage-line"><span>Cobrado neto mes</span><strong>${fmtMoney(month.cobradoNeto)}</strong></div>
                 <div class="coverage-line"><span>Deuda / cobro</span><strong>${month.cobradoNeto ? `${month.multiple.toFixed(2).replace(".", ",")}x` : "-"}</strong></div>
-                <div class="coverage-line"><span>Corte usado</span><strong>${month.closeDate || "-"}</strong></div>
+                <div class="coverage-line"><span>${startLabel}</span><strong>${month.startDate || "-"}</strong></div>
               </div>
             </article>
           `;
