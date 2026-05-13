@@ -375,8 +375,8 @@
 
     .coverage-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 14px;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+      gap: 16px;
     }
 
     .coverage-card {
@@ -388,10 +388,10 @@
     }
 
     .coverage-head {
-      display: flex;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
       gap: 12px;
-      align-items: baseline;
+      align-items: start;
       margin-bottom: 12px;
       padding-bottom: 10px;
       border-bottom: 1px solid var(--line);
@@ -426,8 +426,8 @@
     }
 
     .coverage-line {
-      display: flex;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
       gap: 12px;
       align-items: baseline;
       font-size: 0.9rem;
@@ -438,6 +438,7 @@
       color: var(--ink);
       text-align: right;
       white-space: nowrap;
+      font-size: 0.88rem;
       font-variant-numeric: tabular-nums;
     }
 
@@ -566,14 +567,14 @@
 
     .debt-wrap {
       margin-top: 24px;
-      margin-bottom: 28px;
+      margin-bottom: 40px;
       padding: 24px;
     }
 
     .debt-grid {
       display: grid;
-      grid-template-columns: 340px minmax(0, 1fr);
-      gap: 18px;
+      grid-template-columns: minmax(320px, 360px) minmax(0, 1fr);
+      gap: 20px;
       align-items: start;
     }
 
@@ -627,7 +628,7 @@
     .debt-amount,
     .debt-amount-soft {
       margin-top: 14px;
-      font-size: clamp(1.55rem, 2.4vw, 2.25rem);
+      font-size: clamp(1.45rem, 1.5vw + 1rem, 2.15rem);
       font-weight: 800;
       line-height: 1.08;
       color: var(--ink);
@@ -670,8 +671,9 @@
 
     .debt-months {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 14px;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+      gap: 16px;
+      align-content: start;
     }
 
     .debt-month-card {
@@ -684,10 +686,10 @@
     }
 
     .debt-month-head {
-      display: flex;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
       gap: 12px;
-      align-items: baseline;
+      align-items: start;
       margin-bottom: 12px;
       padding-bottom: 10px;
       border-bottom: 1px solid var(--line);
@@ -705,7 +707,7 @@
       font-variant-numeric: tabular-nums;
       display: grid;
       gap: 4px;
-      white-space: nowrap;
+      max-width: 140px;
     }
 
     .debt-date-list {
@@ -714,10 +716,10 @@
     }
 
     .debt-date-item {
-      display: flex;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: minmax(96px, auto) minmax(0, 1fr);
       gap: 12px;
-      align-items: center;
+      align-items: start;
       padding: 10px 12px;
       border-radius: 12px;
       background: rgba(15, 118, 110, 0.05);
@@ -739,6 +741,7 @@
       gap: 4px;
       justify-items: end;
       min-width: 0;
+      text-align: right;
     }
 
     .debt-date-value,
@@ -746,7 +749,9 @@
       color: var(--ink);
       font-size: 0.88rem;
       font-weight: 800;
-      white-space: nowrap;
+      white-space: normal;
+      line-height: 1.25;
+      text-wrap: pretty;
       text-align: right;
       font-variant-numeric: tabular-nums;
     }
@@ -860,7 +865,8 @@
         grid-template-columns: 1fr;
       }
 
-      .debt-amount {
+      .debt-amount,
+      .debt-amount-soft {
         white-space: normal;
       }
 
@@ -897,6 +903,12 @@
         padding: 18px;
       }
 
+      .debt-wrap,
+      .coverage-wrap,
+      .timeline-wrap {
+        padding: 18px;
+      }
+
       .stat-card {
         grid-column: span 12;
       }
@@ -907,6 +919,28 @@
 
       h1 {
         max-width: none;
+      }
+
+      .debt-month-head,
+      .coverage-head {
+        grid-template-columns: 1fr;
+      }
+
+      .debt-date-item,
+      .coverage-line {
+        grid-template-columns: 1fr;
+      }
+
+      .debt-date-values {
+        justify-items: start;
+        text-align: left;
+      }
+
+      .debt-date-value,
+      .debt-date-net,
+      .coverage-line strong {
+        text-align: left;
+        white-space: normal;
       }
     }
   </style>
