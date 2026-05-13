@@ -1267,7 +1267,6 @@
           startMode: null,
         });
       });
-      let previousClose = null;
       debtMonths.forEach((month) => {
         const current = map.get(month.month) || {
           month: month.month,
@@ -1280,13 +1279,12 @@
           startDate: null,
           startMode: null,
         };
-        const startBase = previousClose || month.items[0] || null;
+        const startBase = month.items[0] || null;
         current.deudaBrutaInicio = startBase?.gastos || 0;
         current.deudaNetaInicioEstimada = current.deudaBrutaInicio * debtNetRatio;
         current.startDate = startBase?.displayDate || null;
-        current.startMode = previousClose ? "carry" : "first-visible";
+        current.startMode = "first-visible";
         map.set(month.month, current);
-        previousClose = month.close || previousClose;
       });
       return [...map.values()].sort((a, b) => a.month.localeCompare(b.month)).map((item) => {
         const cobertura = item.deudaNetaInicioEstimada ? item.cobradoNeto / item.deudaNetaInicioEstimada : 0;
@@ -1453,7 +1451,6 @@
         ? coverageMonths.map((month) => {
           const pct = month.cobertura * 100;
           const pillClass = pct >= 40 ? "good" : "warn";
-          const startLabel = month.startMode === "carry" ? "Base inicial" : "Primer corte visible";
           return `
             <article class="coverage-card">
               <div class="coverage-head">
@@ -1465,7 +1462,7 @@
                 <div class="coverage-line"><span>Deuda neta inicial est.</span><strong>${fmtMoney(month.deudaNetaInicioEstimada)}</strong></div>
                 <div class="coverage-line"><span>Cobrado neto mes</span><strong>${fmtMoney(month.cobradoNeto)}</strong></div>
                 <div class="coverage-line"><span>Deuda / cobro</span><strong>${month.cobradoNeto ? `${month.multiple.toFixed(2).replace(".", ",")}x` : "-"}</strong></div>
-                <div class="coverage-line"><span>${startLabel}</span><strong>${month.startDate || "-"}</strong></div>
+                <div class="coverage-line"><span>Primer corte del mes</span><strong>${month.startDate || "-"}</strong></div>
               </div>
             </article>
           `;
